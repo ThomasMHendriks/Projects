@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block title %}: New{% endblock %}
+
+{% block main %}
+    {% if players %}
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Player</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for player in players %}
+        <tr>
+            <th scope="row">{{ loop.index }}</th>
+            <td>{{ player.name }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <h4>Start by adding players to the tournament!</h4>
+    <hr>
+    {% endif %}
+
+
+<div id="wrapper3">
+    <form method="POST" action="/new">
+        <div class="input-group">
+            <input type="text" name="playerName" class="form-control" placeholder="Player name" aria-label="Recipient's username with two button addons" aria-describedby="button-addon4" autocomplete="off">
+            <div class="input-group-append" id="button-addon4">
+            <button class="btn btn-outline-secondary" id="buttonOrange" name="operation" value="add" type="submit">Add</button>
+            <button class="btn btn-outline-secondary" id="buttonOrange" name="operation" value="remove" type="submit">Remove</button>
+            </div>
+        </div>
+    </form>
+</div>
+<div id="wrapper3">
+    <form method="POST" action="/new">
+        <div class="input-group mb-3">
+            <input type="number" min="1" max="5" name="numberRounds" class="form-control" placeholder="Number of rounds: between 0 and 5" aria-describedby="basic-addon2" autocomplete="off">
+            <div class="input-group-append">
+              <button type="submit" id="buttonOrange" class="btn btn-outline-secondary">Start tournament</button>
+            </div>
+        </div>
+
+    </form>
+</div>
+<hr>
+<div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Suggested nr of rounds</h5>
+      <p class="card-text"> 4 Players = 2 rounds.</p>
+      <p class="card-text"> 5-8 Players = 3 Rounds.</p>
+      <p class="card-text"> 9-16 Players = 4 Rounds.</p>
+      <p class="card-text"> <i>Required # of players: 4-16.</i></p>
+    </div>
+</div>
+
+
+{% endblock %}
