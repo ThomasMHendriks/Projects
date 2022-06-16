@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}: End tournament{% endblock %}
+
+{% block main %}
+<div>
+      <img src="../static/garbage.png" alt="Garbage bin">
+</div>
+<form method="POST" action="/stop">
+      <label for="buttonOrange">Are you sure you want to end the current tournament?</label><br>
+      <small class="form-text text-muted">(Ending the current tournament can not be undone)</small>
+      <div>
+            <button type="submit" id="buttonOrange" name="stopTournament" value="yes" class="btn btn-secondary">Stop current tournament</button>
+      </div>
+
+</form>
+{% endblock %}

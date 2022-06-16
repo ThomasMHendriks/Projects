@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block title %}: Ongoing{% endblock %}
+
+{% block main %}
+<table class="table">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Player</th>
+        <th scope="col">Points</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for player in players %}
+    <tr>
+        <th scope="row">{{ loop.index }}</th>
+        <td>{{ player.name }}</td>
+        <td>{{ player.points }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% if competitors %}
+<div id="wrapper1">
+    {% for competitor in competitors%}
+    <div id="wrapper2">
+        <form method="POST" action="/">
+            <h6>Winner of {{competitor}} versus {{opponents[loop.index0]}}:</h6>
+            <div class="form-check">
+                <input type="radio" name="winner" id="option2" value="{{competitor}}">
+                <label class="form-check-label" for="option2">{{competitor}}</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" name="winner" id="option3" value="{{opponents[loop.index0]}}">
+                <label class="form-check-label" for="option3">{{opponents[loop.index0]}}</label>
+            </div>
+            <button type="submit" class="btn btn-secondary" id="buttonOrange" name="result" value="yes">Submit</button>
+        </form>
+    </div>
+    {% endfor %}
+</div>
+<hr>
+{% else %}
+<form method="POST" action="/">
+    <button type="submit" class="btn btn-secondary" id="buttonOrange" name="pair" value="yes">Pair next round</button>
+</form>
+<hr>
+{% endif %}
+
+{% if results_in %}
+<h3>Results in:</h3>
+<ul>
+{% for result in results_in %}
+<li>{{result}}</li>
+{% endfor %}
+</ul>
+
+{% endif %}
+{% endblock %}

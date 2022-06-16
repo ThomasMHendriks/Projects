@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}: Ongoing{% endblock %}
+
+{% block main %}
+<table class="table">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Player</th>
+        <th scope="col">Points</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for player in players %}
+    <tr>
+        <th scope="row">{{ loop.index }}</th>
+        <td>{{ player.name }}</td>
+        <td>{{ player.points }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<form method="POST" action="/">
+    <button type="submit" class="btn btn-secondary" id="buttonOrange" name="pair" value="yes">Pair next round</button>
+</form>
+{% endblock %}

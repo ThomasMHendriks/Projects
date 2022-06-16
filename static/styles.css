@@ -1,0 +1,57 @@
+#wrapper1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#wrapper2 {
+    margin: 10px;
+    border-radius: 25px;
+    border: 2px solid orange;
+    padding: 20px;
+}
+#wrapper3 {
+    width: 40%;
+    margin: auto;
+}
+
+#buttonOrange {
+    background-color: #FFA500 !important;
+}
+
+.card {
+    width: 18rem; display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+}
+
+body {
+    background: linear-gradient(45deg, linen 25%, ivory);
+}
+
+html {
+    height: 100%;
+    background:linear-gradient(45deg, linen 25%, ivory); no-repeat center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+footer {
+    bottom:0;
+    width:100%;
+    height:35px;
+ }
+
+ul {
+    text-align: center;
+    list-style-position: inside;
+    list-style-type: circle;
+}
+
+img {
+    height:300px;
+    width: auto;
+}
