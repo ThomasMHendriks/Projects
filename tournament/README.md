@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # ThomasMHendriks
 =======
 # Tournament
@@ -44,4 +43,3 @@ To create a easy on the eye look, custom css styling is included in the static f
 
 ###### Created by
 Thomas Hendriks for CS50 as a final project for CS50
->>>>>>> cs50/problems/2022/x/project
