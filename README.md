@@ -1,3 +1,3 @@
 # Projects
 
-List of some of the bigger coding projects
+List of some coding projects
