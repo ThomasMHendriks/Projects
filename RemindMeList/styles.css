@@ -1,0 +1,97 @@
+.flexbox {
+    display: flex;
+}
+
+.flexboxSmall {
+    display: flex;
+}
+
+.flexRight {
+    width: 10%;
+}
+
+.flexLeft {
+    width: 90%;
+}
+
+.container {
+    width: 33%;
+    padding: 2%;
+}
+
+.login {
+    width: 40%;
+    margin: auto;
+    text-align: center;
+}
+
+.welcome {
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 2%;
+    font-family: "Times New Roman", Times, serif;
+    color: ivory;
+}
+
+.emoticon {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+}
+
+body {
+    background: linear-gradient(120deg, deepskyblue 10%, ivory);
+}
+
+
+html {
+    height: 100%;
+}
+
+.nav-link,
+.navbar-brand {
+    color: ivory;
+    padding: 15px;
+}
+
+.btn {
+    background-color: BlanchedAlmond;
+}
+
+.listHeaders {
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    color: white;
+    margin-bottom: 2%;
+}
+
+#flashMessage {
+    background-color: ivory;
+}
+
+@media (max-width: 500px) {
+    .flexbox {
+        flex-direction: column;
+    }
+
+    .container {
+        padding: 0%;
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    .login {
+        width: 100%;
+    }
+}
